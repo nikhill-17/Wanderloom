@@ -38,22 +38,3 @@ Built with a modern, vanilla frontend stack prioritizing high performance, seaml
   * [compare.js](file:///Users/nikhilkumar/Documents/Travel-Guide/components/compare.js) — Side-by-side matrix rendering.
   * [quiz.js](file:///Users/nikhilkumar/Documents/Travel-Guide/components/quiz.js) — Interactive preference matchmaking logic.
   * [about.js](file:///Users/nikhilkumar/Documents/Travel-Guide/components/about.js) / [contact.js](file:///Users/nikhilkumar/Documents/Travel-Guide/components/contact.js) — Support pages.
-
----
-
-## 🚀 Running Locally
-
-Because WanderLoom is structured around Native ES Modules, a local web server is required to bypass browser CORS policies.
-
-### Option 1: Python HTTP Server (Built-in)
-Run the following in your shell within the project directory:
-```bash
-python3 -m http.server 8000
-```
-Then navigate to `http://localhost:8000`.
-
-### Option 2: Live Server or static npm packages
-If you have NodeJS installed, you can launch a hot-reloading server:
-```bash
-npx serve
-```
