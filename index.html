@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WanderLoom | Personal Travel Discovery & Itinerary Designer</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Background Blur Elements for Glassmorphic Depth -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+
+  <!-- Header Navigation -->
+  <header class="app-header">
+    <div class="header-container">
+      <a href="#home" class="logo" id="logo-link">
+        <span class="logo-accent">W</span>anderLoom
+      </a>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+          <li><a href="#about" class="nav-link" id="nav-about">About Us</a></li>
+          <li><a href="#contact" class="nav-link" id="nav-contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button id="wishlist-toggle" class="icon-btn wishlist-btn" aria-label="Toggle saved wishlist" aria-expanded="false" aria-controls="wishlist-drawer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <span class="wishlist-badge" id="wishlist-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Side Drawer for Saved Wishlist -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside id="wishlist-drawer" class="wishlist-drawer" aria-hidden="true" aria-labelledby="wishlist-drawer-title">
+    <div class="drawer-header">
+      <h2 id="wishlist-drawer-title">Your Wishlist</h2>
+      <button id="wishlist-close" class="icon-btn close-btn" aria-label="Close wishlist drawer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="drawer-content" id="wishlist-items-container">
+      <!-- Dynamically filled with saved items -->
+      <div class="empty-state">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+        <p>No saved destinations yet. Explore and tap the heart icon to save your favorites!</p>
+      </div>
+    </div>
+    <div class="drawer-footer">
+      <button id="compare-wishlist-btn" class="primary-btn btn-full">Compare Saved Items</button>
+    </div>
+  </aside>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Main Viewport Mount -->
+  <main id="app-viewport" tabindex="-1" aria-live="polite">
+    <!-- Dynamic templates loaded here -->
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 WanderLoom. Created for modern explorers. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Entry Scripts -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
